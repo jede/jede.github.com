@@ -1,0 +1,87 @@
+/* line 3, ../scss/main.scss */
+body {
+  background-color: #262626;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+/* line 9, ../scss/main.scss */
+hgroup {
+  text-align: center;
+  font-weight: normal;
+}
+
+/* line 14, ../scss/main.scss */
+img {
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  -ms-border-radius: 1000px;
+  -o-border-radius: 1000px;
+  border-radius: 1000px;
+}
+/* line 18, ../scss/main.scss */
+hgroup:hover img {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/* line 23, ../scss/main.scss */
+hgroup {
+  margin-top: 10%;
+}
+
+/* line 27, ../scss/main.scss */
+h1, h2 {
+  margin: 0;
+  font-weight: 300;
+}
+
+/* line 32, ../scss/main.scss */
+h1 {
+  margin-top: 5px;
+  font-size: 2.5em;
+}
+
+/* line 37, ../scss/main.scss */
+h2 {
+  font-style: italic;
+}
+
+/* line 41, ../scss/main.scss */
+.info {
+  margin-top: 30px;
+  text-align: center;
+  height: 50px;
+}
+/* line 45, ../scss/main.scss */
+.info a {
+  line-height: 0;
+  font-size: 0;
+  text-decoration: none;
+  color: transparent;
+}
+/* line 52, ../scss/main.scss */
+.info span {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: 40px;
+  margin: 0 10px;
+  color: gray;
+}
+/* line 59, ../scss/main.scss */
+.info a:visited span {
+  color: #4d4d4d;
+}
+/* line 63, ../scss/main.scss */
+.info a:hover span {
+  color: white;
+}
