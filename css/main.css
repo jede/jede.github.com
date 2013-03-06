@@ -106,14 +106,4 @@ h2 {
   h2 {
     font-size: 1.5em;
   }
-
-  /* line 85, ../scss/main.scss */
-  .info {
-    margin-top: 50px;
-  }
-  /* line 88, ../scss/main.scss */
-  .info span {
-    font-size: 56px;
-    margin: 0 15px;
-  }
 }
