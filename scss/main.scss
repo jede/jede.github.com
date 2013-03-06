@@ -69,18 +69,22 @@ h2 {
 
 }
 
-@media screen and (min-width: 321) {
-
+@media screen and (min-width: 321px) {
   h1 {
-    font-size: 3em;
+    font-size: 2.6em;
   }
 
   h2 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
-  .info span {
-    font-size: 56px;
+  .info {
+    margin-top: 50px;
+
+    span {
+      font-size: 56px;
+      margin: 0 15px;
+    }
   }
 }
 
