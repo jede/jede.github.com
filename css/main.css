@@ -39,49 +39,71 @@ hgroup {
 
 /* line 27, ../scss/main.scss */
 h1, h2 {
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
   margin: 0;
   font-weight: 300;
 }
 
-/* line 32, ../scss/main.scss */
+/* line 33, ../scss/main.scss */
 h1 {
   margin-top: 5px;
   font-size: 2.5em;
 }
 
-/* line 37, ../scss/main.scss */
+/* line 38, ../scss/main.scss */
 h2 {
+  font-size: 1.5em;
   font-style: italic;
 }
 
-/* line 41, ../scss/main.scss */
+/* line 43, ../scss/main.scss */
 .info {
   margin-top: 30px;
   text-align: center;
   height: 50px;
 }
-/* line 45, ../scss/main.scss */
+/* line 48, ../scss/main.scss */
 .info a {
   line-height: 0;
   font-size: 0;
   text-decoration: none;
   color: transparent;
 }
-/* line 52, ../scss/main.scss */
+/* line 55, ../scss/main.scss */
 .info span {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  font-size: 56px;
+  font-size: 28px;
   margin: 0 10px;
   color: gray;
 }
-/* line 59, ../scss/main.scss */
+/* line 62, ../scss/main.scss */
 .info a:visited span {
   color: #4d4d4d;
 }
-/* line 63, ../scss/main.scss */
+/* line 66, ../scss/main.scss */
 .info a:hover span {
   color: white;
+}
+
+@media screen and (min-width: 321) {
+  /* line 74, ../scss/main.scss */
+  h1 {
+    font-size: 3em;
+  }
+
+  /* line 78, ../scss/main.scss */
+  h2 {
+    font-size: 2em;
+  }
+
+  /* line 82, ../scss/main.scss */
+  .info span {
+    font-size: 56px;
+  }
 }
