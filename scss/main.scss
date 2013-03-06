@@ -1,5 +1,9 @@
 @import "compass";
 
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
   background-color: hsl(0, 0%, 15%); //#f6da5f; /*hsl(12, 100%, 70%)*/
   font-family: "Open Sans", sans-serif;
