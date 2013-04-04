@@ -1,22 +1,35 @@
-/* line 3, ../scss/main.scss */
+@font-face {
+  font-family: 'entypo-social';
+  src: url("../font/entypo-social.eot");
+  src: url("../font/entypo-social.eot?#iefix") format("embedded-opentype"), url("../font/entypo-social.woff") format("woff"), url("../font/entypo-social.ttf") format("truetype"), url("../font/entypo-social.svg#entypo-social") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 16, ../scss/main.scss */
 * {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 7, ../scss/main.scss */
+/* line 20, ../scss/main.scss */
 body {
   background-color: #262626;
   font-family: "Open Sans", sans-serif;
   color: white;
 }
 
-/* line 13, ../scss/main.scss */
+/* line 26, ../scss/main.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 30, ../scss/main.scss */
 hgroup {
   text-align: center;
   font-weight: normal;
 }
 
-/* line 18, ../scss/main.scss */
+/* line 35, ../scss/main.scss */
 img {
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
@@ -24,11 +37,9 @@ img {
   transition: all 0.5s ease-in;
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
-  -ms-border-radius: 1000px;
-  -o-border-radius: 1000px;
   border-radius: 1000px;
 }
-/* line 22, ../scss/main.scss */
+/* line 39, ../scss/main.scss */
 hgroup:hover img {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -37,72 +48,79 @@ hgroup:hover img {
   transform: rotateY(180deg);
 }
 
-/* line 27, ../scss/main.scss */
+/* line 44, ../scss/main.scss */
 hgroup {
   margin-top: 10%;
 }
 
-/* line 31, ../scss/main.scss */
+/* line 48, ../scss/main.scss */
 h1, h2 {
-  -webkit-transition: all 2s;
-  -moz-transition: all 2s;
-  -o-transition: all 2s;
-  transition: all 2s;
   margin: 0;
   font-weight: 300;
+  color: white;
 }
 
-/* line 37, ../scss/main.scss */
+/* line 54, ../scss/main.scss */
 h1 {
   margin-top: 5px;
   font-size: 1.8em;
 }
 
-/* line 42, ../scss/main.scss */
+/* line 59, ../scss/main.scss */
 h2 {
-  font-size: 1.4em;
+  font-size: 1.2em;
+  font-weight: 400;
   font-style: italic;
+  color: #999999;
 }
 
-/* line 47, ../scss/main.scss */
+/* line 66, ../scss/main.scss */
 .info {
   margin-top: 30px;
   text-align: center;
   height: 50px;
 }
-/* line 52, ../scss/main.scss */
+/* line 71, ../scss/main.scss */
 .info a {
   line-height: 0;
   font-size: 0;
-  text-decoration: none;
   color: transparent;
 }
-/* line 59, ../scss/main.scss */
+/* line 77, ../scss/main.scss */
 .info span {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  font-size: 28px;
   margin: 0 10px;
   color: gray;
 }
-/* line 66, ../scss/main.scss */
+/* line 83, ../scss/main.scss */
 .info a:visited span {
   color: #4d4d4d;
 }
-/* line 70, ../scss/main.scss */
+/* line 87, ../scss/main.scss */
 .info a:hover span {
   color: white;
 }
 
+/* line 94, ../scss/main.scss */
+.icon {
+  font: 60px 'entypo-social';
+}
+
+/* line 98, ../scss/main.scss */
+.icon-twitter {
+  content: "";
+}
+
 @media screen and (min-width: 321px) {
-  /* line 77, ../scss/main.scss */
+  /* line 104, ../scss/main.scss */
   h1 {
     font-size: 2.6em;
   }
 
-  /* line 81, ../scss/main.scss */
+  /* line 108, ../scss/main.scss */
   h2 {
     font-size: 1.5em;
   }
