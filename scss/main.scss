@@ -57,7 +57,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 400;
   font-style: italic;
   color: hsl(0,0,60%);
@@ -93,6 +93,7 @@ h2 {
 
 .icon {
   font: 60px 'entypo-social';
+  @include text-shadow(0 1px 5px rgba(black, .2))
 }
 
 .icon-twitter {

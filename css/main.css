@@ -68,7 +68,7 @@ h1 {
 
 /* line 59, ../scss/main.scss */
 h2 {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 400;
   font-style: italic;
   color: #999999;
@@ -107,20 +107,21 @@ h2 {
 /* line 94, ../scss/main.scss */
 .icon {
   font: 60px 'entypo-social';
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* line 98, ../scss/main.scss */
+/* line 99, ../scss/main.scss */
 .icon-twitter {
   content: "";
 }
 
 @media screen and (min-width: 321px) {
-  /* line 104, ../scss/main.scss */
+  /* line 105, ../scss/main.scss */
   h1 {
     font-size: 2.6em;
   }
 
-  /* line 108, ../scss/main.scss */
+  /* line 109, ../scss/main.scss */
   h2 {
     font-size: 1.5em;
   }
