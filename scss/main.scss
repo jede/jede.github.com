@@ -12,13 +12,28 @@
 }
 
 
+@include keyframes(fade-in) {
+  0% { 
+    @include opacity(0);
+    @include transform(rotateY(-90deg) rotateZ(-40deg)); 
+  }
+  100% { 
+    @include opacity(100);
+    @include transform(rotateY(0deg) rotateZ(0deg)); 
+  }
+}
+
+@include keyframes(rotate-in) {
+  0% { @include transform(rotateY(-90deg) rotateZ(-40deg)); }
+  100% { @include transform(rotateY(0deg) rotateZ(0deg)); }
+}
 
 * {
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-color: hsl(0, 0%, 15%); 
+  background-color: hsl(30, 4%, 10%); 
   font-family: "Open Sans", sans-serif;
   color: white;
 }
@@ -28,21 +43,18 @@ a {
 }
 
 hgroup {
+  @include animation(fade-in .6s);
+  @include transition(all .3s);
   text-align: center;
   font-weight: normal;
+  margin-top: 10%;
 }
 
 img {
-  @include transition(all .5s ease-in);
+  @include animation(rotate-in
+ 1.1s ease-out);
   @include border-radius(1000px);
 
-  hgroup:hover & {
-    @include transform(rotateY(180deg));
-  }
-}
-
-hgroup {
-  margin-top: 10%;
 }
 
 h1, h2 {
@@ -57,12 +69,21 @@ h1 {
 }
 
 h2 {
-  font-size: 1.1em;
-  font-style: italic;
+  font-size: 1em;
+  font-weight: 400;
   color: hsl(0,0,60%);
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  margin-top: .1em;
 }
 
+hgroup:hover, hgroup:focus {
+  @include text-shadow(0 0 14px rgba(white, .4));
+}
+
+
 .info {
+  @include animation(fade-in .6s);
   margin-top: 30px;
   text-align: center;
   height: 50px;
@@ -79,12 +100,9 @@ h2 {
     color: hsl(0,0%,50%);
   }
 
-  a:visited span {
-    color: hsl(0,0%,30%);
-  }
-
-  a:hover span {
+  a:hover span, a:focus span {
     color: white;
+    @include text-shadow(0 0 10px rgba(white, .3));
   }
 
 }
@@ -106,7 +124,7 @@ h2 {
   }
 
   h2 {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }
 
