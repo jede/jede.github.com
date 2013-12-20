@@ -1,1 +1,11 @@
-body {}
+body {
+  text-align: center;
+  background-color: #0D141A;
+}
+div {
+  margin-top: 15px;
+  text-align: center;
+  font-family: "Lucida Grande";
+  font-size: 14px;
+  color: #324556;
+}
