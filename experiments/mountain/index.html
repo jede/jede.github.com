@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="copyright" content="Copyright © 2013 Adobe Systems Incorporated. All rights reserved.
+ 
+ Licensed under the Apache License, Version 2.0 (the “License”);
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an “AS IS” BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.">
+        <title>Snap</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="./snap.svg.js"></script>
+        <script>
+        window.onload = function () {
+
+            var mount = Snap.select("#mountain"),
+                scene = Snap.select("#scene"),
+                timer;
+            
+            var orig = mount.transform().globalMatrix.clone(),
+            squish = orig.clone()
+              .translate(0, 40)
+              .scale(1.5,.2, 400, 180)
+              
+             // .add(new Snap.Matrix(.4, 0, 1.4, 1, -50, 0))
+            var sorig = scene.transform().globalMatrix.clone(),
+             
+            trans = sorig.clone()
+              .translate(0, -700)
+
+
+
+            var place = function () {
+                clearTimeout(timer);
+
+                scene.animate({ 
+                    transform: sorig.toTransformString()
+                }, 170, mina.easein, function(){
+                  mount.animate({ transform: squish.toTransformString() }, 150, mina.linear, function(){
+                    mount.animate({ transform: orig.toTransformString() }, 800, function (n) {
+                      if (n == !!n) { return n; }
+                      return Math.pow(1.5, -10 * n) * Math.sin((n - .075) * (2 * Math.PI) / .4) + 1;
+                    },function(){
+                    setTimeout(function(){
+                      mount.animate({ 
+                        transform: mount.transform().globalMatrix.clone().scale(0.4, 1, 400, 180).toTransformString()
+                      }, 370,function (n) {
+                      if (n == !!n) { return n; }
+                      return Math.pow(2, -10 * n) * Math.sin((n - .075) * (2 * Math.PI) / .6) + 1;
+                    });
+
+                      scene.animate({ 
+                        transform: sorig.translate(0,700).toTransformString()
+                      }, 370, mina.backin);
+                    }, 1000)
+                  });
+                  });
+                });
+
+            }
+
+            scene.transform(trans);
+            timer = setTimeout(place, 50);
+
+        };
+        </script>
+    </head>
+    <body>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Landscape</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="800" height="600"></rect>
+        <linearGradient x1="-142.498779%" y1="50%" x2="50%" y2="121.868896%" id="linearGradient-2">
+            <stop stop-color="#E6F3FF" offset="0%"></stop>
+            <stop stop-color="#58B0FD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landscape" sketch:type="MSArtboardGroup">
+            <g id="background">
+                <use fill="#85C6FF" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                <use fill-opacity="0.7" fill="#000000" xlink:href="#path-1"></use>
+            </g>
+            <g id="scene" sketch:type="MSLayerGroup">
+                <g id="mountain" sketch:type="MSShapeGroup"  transform="translate(122.000000, 192.000000)">
+                    <path d="M0,216 L120,136 L220,84 L272,44 L336,0 L412,62 L460,100 L508,144 L564,200 L448,236 L342,248 L160,238 L0,216 Z" id="BG" fill="#FFFFFF"></path>
+                    <path d="M564,200 L508,143.837673 L436,148 L448,236.000004 L564,200 Z" id="base3" opacity="0.558025568" fill="url(#linearGradient-2)"></path>
+                    <path d="M448,236 L436,148 L340,156 L342,248 L448,236 Z" id="base3" opacity="0.558025568" fill="url(#linearGradient-2)"></path>
+                    <path d="M342,248 L340,156 L188,144 L160,238 L342,248 Z" id="base2" opacity="0.49" fill="url(#linearGradient-2)"></path>
+                    <path d="M160,238 L0,216 L120,136 L188,144 L160,238 Z" id="base1" opacity="0.49" fill="url(#linearGradient-2)"></path>
+                    <path d="M416,108 L436,148 L508,144 L460,100 L416,108 Z" id="midbase4" opacity="0.558025568" fill="url(#linearGradient-2)"></path>
+                    <path d="M416,108 L436,148 L340,156 L336,108 L416,108 Z" id="midbase3" opacity="0.558025568" fill="url(#linearGradient-2)"></path>
+                    <path d="M220,84 L188,144 L340,156 L336,108 L220,84 Z" id="midbase2" opacity="0.4" fill="url(#linearGradient-2)"></path>
+                    <path d="M188,144 L120,136 L220,84 L188,144 Z" id="midbase1" opacity="0.4" fill="url(#linearGradient-2)"></path>
+                    <path d="M412,62 L460,100 L416,108 L412,62 Z" id="midtop3" opacity="0.53" fill="url(#linearGradient-2)"></path>
+                    <path d="M416,108 L412,62 L336,64 L336,108 L416,108 Z" id="midtop2" opacity="0.429758523" fill="url(#linearGradient-2)"></path>
+                    <path d="M220,84 L272,44 L336,64 L336,108 L220,84 Z" id="midtop1" opacity="0.275284091" fill="url(#linearGradient-2)"></path>
+                    <path d="M336,64 L272,44 L336,0 L336,64 Z" id="top2" opacity="0.143963068" fill="url(#linearGradient-2)"></path>
+                    <path d="M336,64 L336,0 L411.999996,62 L336,64 Z" id="top1" opacity="0.178338068" fill="url(#linearGradient-2)"></path>
+                    <path d="M340,156 L336,108 L336,64 L336,0 L412,62 L460,100 L508,144 L564,200 L448,236 L342,248 L340,156 Z" id="Shade" opacity="0.35" fill="#689FD0"></path>
+                </g>
+            </g>
+            <g id="Rectangle-2-+-GIF" sketch:type="MSLayerGroup" transform="translate(30.000000, 30.000000)" opacity="0.4">
+                <rect id="Rectangle-2" stroke="#AED9FF" stroke-width="2" sketch:type="MSShapeGroup" x="0" y="0" width="120" height="57" rx="5"></rect>
+                <text id="GIF" fill="#AED9FF" sketch:type="MSTextLayer" font-family="Gotham" font-size="32" font-weight="420" sketch:alignment="middle" letter-spacing="6">
+                    <tspan x="27.388" y="40">GIF</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
+</body>
+</html>
