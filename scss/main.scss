@@ -104,6 +104,7 @@ hgroup:hover, hgroup:focus {
   max-width: 280px;
   margin: 1.6em auto;
   a {
+    @include transition(all .3s);
     color: white;
     &:hover, &:focus {
       @include text-shadow(0 0 14px rgba(white, .4));

@@ -258,14 +258,18 @@ hgroup:hover, hgroup:focus {
 }
 /* line 106, ../scss/main.scss */
 .bio a {
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   color: white;
 }
-/* line 108, ../scss/main.scss */
+/* line 109, ../scss/main.scss */
 .bio a:hover, .bio a:focus {
   text-shadow: 0 0 14px rgba(255, 255, 255, 0.4);
 }
 
-/* line 114, ../scss/main.scss */
+/* line 115, ../scss/main.scss */
 .info {
   -moz-animation: fly-in 1.6s, appear 1.5s;
   -webkit-animation: fly-in 1.6s, appear 1.5s;
@@ -274,13 +278,13 @@ hgroup:hover, hgroup:focus {
   text-align: center;
   height: 50px;
 }
-/* line 120, ../scss/main.scss */
+/* line 121, ../scss/main.scss */
 .info a {
   line-height: 0;
   font-size: 0;
   color: transparent;
 }
-/* line 126, ../scss/main.scss */
+/* line 127, ../scss/main.scss */
 .info span {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -289,35 +293,35 @@ hgroup:hover, hgroup:focus {
   margin: 0 10px;
   color: gray;
 }
-/* line 132, ../scss/main.scss */
+/* line 133, ../scss/main.scss */
 .info a:hover span, .info a:focus span {
   color: white;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-/* line 140, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 .icon, .icon-social {
   font: 60px 'entypo';
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* line 144, ../scss/main.scss */
+/* line 145, ../scss/main.scss */
 .icon-social {
   font-family: 'entypo-social';
 }
 
-/* line 149, ../scss/main.scss */
+/* line 150, ../scss/main.scss */
 .icon-twitter {
   content: "";
 }
 
 @media screen and (min-width: 400px) {
-  /* line 155, ../scss/main.scss */
+  /* line 156, ../scss/main.scss */
   h1 {
     font-size: 2.4em;
   }
 
-  /* line 159, ../scss/main.scss */
+  /* line 160, ../scss/main.scss */
   h2 {
     font-size: 1.2em;
   }
