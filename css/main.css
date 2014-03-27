@@ -68,7 +68,13 @@
     transform: translateY(50px) rotateX(-40deg);
   }
 
-  /* line 41, ../scss/main.scss */
+  /* line 39, ../scss/main.scss */
+  30% {
+    -moz-transform: translateY(50px) rotateX(-40deg);
+    transform: translateY(50px) rotateX(-40deg);
+  }
+
+  /* line 40, ../scss/main.scss */
   100% {
     -moz-transform: translateY(0px) rotateX(0deg);
     transform: translateY(0px) rotateX(0deg);
@@ -81,7 +87,13 @@
     transform: translateY(50px) rotateX(-40deg);
   }
 
-  /* line 41, ../scss/main.scss */
+  /* line 39, ../scss/main.scss */
+  30% {
+    -webkit-transform: translateY(50px) rotateX(-40deg);
+    transform: translateY(50px) rotateX(-40deg);
+  }
+
+  /* line 40, ../scss/main.scss */
   100% {
     -webkit-transform: translateY(0px) rotateX(0deg);
     transform: translateY(0px) rotateX(0deg);
@@ -96,7 +108,15 @@
     transform: translateY(50px) rotateX(-40deg);
   }
 
-  /* line 41, ../scss/main.scss */
+  /* line 39, ../scss/main.scss */
+  30% {
+    -moz-transform: translateY(50px) rotateX(-40deg);
+    -ms-transform: translateY(50px) rotateX(-40deg);
+    -webkit-transform: translateY(50px) rotateX(-40deg);
+    transform: translateY(50px) rotateX(-40deg);
+  }
+
+  /* line 40, ../scss/main.scss */
   100% {
     -moz-transform: translateY(0px) rotateX(0deg);
     -ms-transform: translateY(0px) rotateX(0deg);
@@ -105,56 +125,71 @@
   }
 }
 @-moz-keyframes appear {
-  /* line 46, ../scss/main.scss */
+  /* line 43, ../scss/main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 49, ../scss/main.scss */
+  /* line 44, ../scss/main.scss */
+  30% {
+    opacity: 0;
+  }
+
+  /* line 45, ../scss/main.scss */
   100% {
     opacity: 100;
   }
 }
 @-webkit-keyframes appear {
-  /* line 46, ../scss/main.scss */
+  /* line 43, ../scss/main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 49, ../scss/main.scss */
+  /* line 44, ../scss/main.scss */
+  30% {
+    opacity: 0;
+  }
+
+  /* line 45, ../scss/main.scss */
   100% {
     opacity: 100;
   }
 }
 @keyframes appear {
-  /* line 46, ../scss/main.scss */
+  /* line 43, ../scss/main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 49, ../scss/main.scss */
+  /* line 44, ../scss/main.scss */
+  30% {
+    opacity: 0;
+  }
+
+  /* line 45, ../scss/main.scss */
   100% {
     opacity: 100;
   }
 }
-/* line 53, ../scss/main.scss */
+/* line 47, ../scss/main.scss */
 * {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 57, ../scss/main.scss */
+/* line 51, ../scss/main.scss */
 body {
   background-color: #1b1a18;
   font-family: "Open Sans", sans-serif;
   color: white;
 }
 
-/* line 63, ../scss/main.scss */
+/* line 57, ../scss/main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 67, ../scss/main.scss */
+/* line 61, ../scss/main.scss */
 hgroup {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -165,7 +200,7 @@ hgroup {
   margin-top: 10%;
 }
 
-/* line 74, ../scss/main.scss */
+/* line 68, ../scss/main.scss */
 img {
   -moz-border-radius: 1000px;
   -webkit-border-radius: 1000px;
@@ -176,28 +211,28 @@ img {
   height: 140px;
 }
 
-/* line 80, ../scss/main.scss */
+/* line 74, ../scss/main.scss */
 h1, h2 {
   margin: 0;
   font-weight: 400;
   color: white;
 }
 
-/* line 85, ../scss/main.scss */
+/* line 79, ../scss/main.scss */
 h1 {
-  -moz-animation: fly-in 0.4s, appear 1s;
-  -webkit-animation: fly-in 0.4s, appear 1s;
-  animation: fly-in 0.4s, appear 1s;
+  -moz-animation: fly-in 0.9s, appear 1.5s;
+  -webkit-animation: fly-in 0.9s, appear 1.5s;
+  animation: fly-in 0.9s, appear 1.5s;
   margin-top: 5px;
   font-size: 1.5em;
   font-weight: 300;
 }
 
-/* line 92, ../scss/main.scss */
+/* line 86, ../scss/main.scss */
 h2 {
-  -moz-animation: fly-in 0.6s, appear 1s;
-  -webkit-animation: fly-in 0.6s, appear 1s;
-  animation: fly-in 0.6s, appear 1s;
+  -moz-animation: fly-in 1.1s, appear 1.5s;
+  -webkit-animation: fly-in 1.1s, appear 1.5s;
+  animation: fly-in 1.1s, appear 1.5s;
   font-size: 1em;
   color: #999999;
   text-transform: uppercase;
@@ -205,47 +240,47 @@ h2 {
   margin-top: .1em;
 }
 
-/* line 101, ../scss/main.scss */
+/* line 95, ../scss/main.scss */
 hgroup:hover, hgroup:focus {
   text-shadow: 0 0 14px rgba(255, 255, 255, 0.4);
 }
 
-/* line 105, ../scss/main.scss */
+/* line 99, ../scss/main.scss */
 .bio {
-  -moz-animation: fly-in 0.8s, appear 1s;
-  -webkit-animation: fly-in 0.8s, appear 1s;
-  animation: fly-in 0.8s, appear 1s;
+  -moz-animation: fly-in 1.3s, appear 1.5s;
+  -webkit-animation: fly-in 1.3s, appear 1.5s;
+  animation: fly-in 1.3s, appear 1.5s;
   text-align: center;
   font-weight: 400;
   color: #999999;
   max-width: 280px;
   margin: 1.6em auto;
 }
-/* line 112, ../scss/main.scss */
+/* line 106, ../scss/main.scss */
 .bio a {
   color: white;
 }
-/* line 114, ../scss/main.scss */
+/* line 108, ../scss/main.scss */
 .bio a:hover, .bio a:focus {
   text-shadow: 0 0 14px rgba(255, 255, 255, 0.4);
 }
 
-/* line 120, ../scss/main.scss */
+/* line 114, ../scss/main.scss */
 .info {
-  -moz-animation: fly-in 1.1s, appear 1s;
-  -webkit-animation: fly-in 1.1s, appear 1s;
-  animation: fly-in 1.1s, appear 1s;
+  -moz-animation: fly-in 1.6s, appear 1.5s;
+  -webkit-animation: fly-in 1.6s, appear 1.5s;
+  animation: fly-in 1.6s, appear 1.5s;
   margin-top: 30px;
   text-align: center;
   height: 50px;
 }
-/* line 126, ../scss/main.scss */
+/* line 120, ../scss/main.scss */
 .info a {
   line-height: 0;
   font-size: 0;
   color: transparent;
 }
-/* line 132, ../scss/main.scss */
+/* line 126, ../scss/main.scss */
 .info span {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -254,35 +289,35 @@ hgroup:hover, hgroup:focus {
   margin: 0 10px;
   color: gray;
 }
-/* line 138, ../scss/main.scss */
+/* line 132, ../scss/main.scss */
 .info a:hover span, .info a:focus span {
   color: white;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-/* line 146, ../scss/main.scss */
+/* line 140, ../scss/main.scss */
 .icon, .icon-social {
   font: 60px 'entypo';
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* line 150, ../scss/main.scss */
+/* line 144, ../scss/main.scss */
 .icon-social {
   font-family: 'entypo-social';
 }
 
-/* line 155, ../scss/main.scss */
+/* line 149, ../scss/main.scss */
 .icon-twitter {
   content: "";
 }
 
 @media screen and (min-width: 400px) {
-  /* line 161, ../scss/main.scss */
+  /* line 155, ../scss/main.scss */
   h1 {
     font-size: 2.4em;
   }
 
-  /* line 165, ../scss/main.scss */
+  /* line 159, ../scss/main.scss */
   h2 {
     font-size: 1.2em;
   }
