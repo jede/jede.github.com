@@ -288,7 +288,7 @@ a {
 .api-view .content {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 480px;
+  max-width: 380px;
   text-align: center;
 }
 /* line 184, ../scss/main.scss */
@@ -318,11 +318,16 @@ a {
 }
 @media screen and (min-width: 400px) {
   /* line 207, ../scss/main.scss */
+  .api-view h1 {
+    margin-top: 2em;
+  }
+  /* line 210, ../scss/main.scss */
   .api-view p {
     font-size: 1em;
   }
-  /* line 210, ../scss/main.scss */
+  /* line 213, ../scss/main.scss */
   .api-view .api-feedback-button {
+    margin-top: 1.4em;
     font-size: 1.2em;
   }
 }
