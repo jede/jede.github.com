@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      .container {
+        margin-left: 0;
+        transition: all 0.5s;
+      }
+      @media only screen and (min-width: 1160px) {
+        .container {
+          margin-left: 270px;
+        }
+      }
+      @media print {
+        .container {
+          transition: none;
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      Hello
+    </div>
+  </body>
+</html>
