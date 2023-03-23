@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Table</title>
+  </head>
+  <body>
+    <input type="file" id="fileInput" onchange="handleImage()" />
+    <button onclick="copyTable()">Copy</button>
+    <canvas id="canvas" style="display: none"></canvas>
+    <table id="colorTable"></table>
+    <script>
+      function copyTable() {
+        var table = document.getElementById("colorTable");
+        const blob = new Blob([table.outerHTML], { type: "text/html" });
+        const clipboardItem = new window.ClipboardItem({ "text/html": blob });
+        navigator.clipboard.write([clipboardItem]);
+      }
+
+      function handleImage() {
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var img = new Image();
+        img.onload = function () {
+          var width = img.width;
+          var height = img.height;
+          var newHeight = 50;
+          var newWidth = Math.round(width * (newHeight / height));
+          console.log(newWidth, newHeight, height, width)
+          canvas.width = newWidth;
+          canvas.height = newHeight;
+          ctx.drawImage(img, 0, 0, width, height, 0, 0, newWidth, newHeight);
+          var pixelData = ctx.getImageData(0, 0, newWidth, newHeight).data;
+          var table = document.getElementById("colorTable");
+          table.innerHTML = "";
+          for (var i = 0; i < newHeight; i++) {
+            var row = table.insertRow();
+            for (var j = 0; j < newWidth; j++) {
+              var index = (i * newWidth + j) * 4;
+              var red = pixelData[index];
+              var green = pixelData[index + 1];
+              var blue = pixelData[index + 2];
+              var color =
+                "#" + rgbToHex(red) + rgbToHex(green) + rgbToHex(blue);
+              var cell = row.insertCell();
+              cell.style.backgroundColor = color;
+              cell.style.color = color;
+              cell.style.borderColor = color;
+              cell.style.borderWidth = '1px';
+              cell.style.borderStyle = 'solid';
+              cell.innerHTML = color;
+            }
+          }
+        };
+        img.src = URL.createObjectURL(event.target.files[0]);
+      }
+
+      function rgbToHex(rgb) {
+        var hex = Number(rgb).toString(16);
+        if (hex.length < 2) {
+          hex = "0" + hex;
+        }
+        return hex;
+      }
+    </script>
+  </body>
+</html>
